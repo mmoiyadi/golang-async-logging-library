@@ -72,7 +72,7 @@ func (al Alog) shutdown() {
 }
 
 // MessageChannel returns a channel that accepts messages that should be written to the log.
-func (al Alog) MessageChannel() <-chan string {
+func (al Alog) MessageChannel() chan<- string {
 	return al.msgCh
 }
 
